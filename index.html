@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required Documents | Matthew Younes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Document Prep-List</h1>
+        <p class="subtitle">Select your employment type to see what you need.</p>
+
+        <div class="profile-selector">
+            <button class="toggle-btn active" onclick="setProfile('w2')">W2 Employee</button>
+            <button class="toggle-btn" onclick="setProfile('self')">Self-Employed</button>
+        </div>
+
+        <h2>Essentials</h2>
+
+        <div class="doc-card" id="d1" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Driver's License / ID</span>
+                <span class="doc-note">Clear photo of valid government ID.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d2" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Bank Statements (Last 2 Months)</span>
+                <span class="doc-note">
+                    <strong>Must be full PDF</strong> (all pages/blanks included). <span class="warning">NO SCREENSHOTS</span>
+                </span>
+            </div>
+        </div>
+
+        <h2>Income Documentation</h2>
+
+        <div class="doc-card w2-only" id="d3" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Paystubs (Last 30 Days)</span>
+                <span class="doc-note">Most recent consecutive paystubs.</span>
+            </div>
+        </div>
+
+        <div class="doc-card w2-only" id="d4" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">W2 Forms (Last 2 Years)</span>
+                <span class="doc-note">2023 and 2024 W2s from all employers.</span>
+            </div>
+        </div>
+
+        <div class="doc-card self-only hidden" id="d5" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Personal Tax Returns (1040s)</span>
+                <span class="doc-note">Last 2 years (Full PDF, all schedules/pages).</span>
+            </div>
+        </div>
+
+        <div class="doc-card self-only hidden" id="d6" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Business Tax Returns</span>
+                <span class="doc-note">Last 2 years (1120S or 1065) + K1s.</span>
+            </div>
+        </div>
+
+        <div class="doc-card self-only hidden" id="d7" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Year-to-Date P&L</span>
+                <span class="doc-note">Profit & Loss statement signed by you.</span>
+            </div>
+        </div>
+
+        <h2>If Applicable</h2>
+
+        <div class="doc-card" id="d8" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Current Mortgage Statement</span>
+                <span class="doc-note">Most recent statement for <strong>all</strong> properties owned.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d9" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Home Insurance Policy</span>
+                <span class="doc-note">Declarations page for all properties owned.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d10" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Divorce Decree / Separation</span>
+                <span class="doc-note">Required if you pay/receive Alimony or Child Support.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d11" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Child Support / Alimony Proof</span>
+                <span class="doc-note">Proof of receipt for 6 months OR proof of payment.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d12" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">Bankruptcy / Foreclosure Papers</span>
+                <span class="doc-note">Discharge papers if within last 7 years.</span>
+            </div>
+        </div>
+
+        <div class="doc-card" id="d13" onclick="toggleCheck(this)">
+            <div class="checkbox"></div>
+            <div class="content">
+                <span class="doc-title">DD-214</span>
+                <span class="doc-note">Only if applying for a VA Loan.</span>
+            </div>
+        </div>
+
+        <button class="glass-btn" onclick="localStorage.clear(); location.reload();">Reset Progress</button>
+
+        <div class="footer">
+            <div class="brand-name">
+                By Matthew Younes | NMLS #2751438
+            </div>
+            <div class="brand-details">
+                <br>
+                Equal Housing Opportunity<br>
+                Employed by Consumer Trust Mortgage | NMLS #185144
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
